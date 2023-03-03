@@ -27,7 +27,17 @@ body {
   top: 0;
   z-index: 1;
   width: 100%;
-  border: 1px solid rgba(235, 235, 240, 0.2);;
+  border: 1px solid rgba(235, 235, 240, 0.2);
+  transition: background-color .2s;
+}
+
+.navbar-light {
+  background-color: #fff;
+  color: #292D33;;
+}
+
+.navbar-light .header-logo-path {
+  fill: #292D33;;
 }
 
 .header {
