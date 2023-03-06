@@ -51,6 +51,7 @@ body {
    background-size: cover;
    background-repeat: no-repeat;
    position: relative;
+   background-position: center bottom -56px;
 }
 
 .header-image::before {
@@ -118,6 +119,7 @@ body {
 .navbar-button {
   flex-shrink: 0;
   height: 100%;
+  padding: 25px 50px;
 }
 
 .seporator {
@@ -139,6 +141,8 @@ body {
   font-size: 80px;
   line-height: 120%;
   margin: 30px 0;
+    word-spacing: -1.6px;
+    letter-spacing: 0.75px;
 
 }
 
@@ -163,7 +167,7 @@ body {
 .header-features-item {
   padding: 30px 50px;
   border: 1px solid rgba(235, 235, 240, 0.2);
-
+  width: 300px;
 }
 
 .header-features-item:not(:last-child) {
@@ -174,6 +178,8 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 160%;
+  margin-bottom: 0;
+  margin-top: 18px;
 }
 
 .section {
@@ -187,6 +193,7 @@ body {
   font-size: 60px;
   line-height: 120%;
   color: #292D33;
+  margin-bottom: 32px;
 }
 
 .steps {
@@ -197,7 +204,7 @@ body {
 }
 
 .steps-item {
-  max-width: 330px;
+  width: 330px;
 }
 
 .steps-num {
@@ -220,6 +227,7 @@ body {
 
 .steps-title {
   font-weight: 400;
+  width: 300px;
   font-size: 28px;
   line-height: 160%;
   color: #292D33;
@@ -228,11 +236,13 @@ body {
 }
 
 .steps-text {
+  width: 300px;
   font-weight: 400;
   font-size: 16px;
   line-height: 160%;
   color: #828A99;
   margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .steps-link {
