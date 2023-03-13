@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+}
+
 @font-face {
   font-family: 'Bebas Neue'; 
   src: url('../fonts/BebasNeueBook.woff') format('woff');
@@ -13,7 +17,7 @@ body {
 }
 
 .container {
-   max-width: 1440px;
+   max-width: 90rem;
    margin: auto;
 }
 
@@ -21,7 +25,7 @@ body {
   display: flex;
   align-items: center;
   color: #fff;
-  height: 94px;
+  height: 5.875rem;
   position: fixed;
   left: 0;
   top: 0;
@@ -34,7 +38,12 @@ body {
 .navbar-light {
   background-color: #fff;
   color: #292D33;;
-  height: 72px;
+  height: 4.5rem;
+}
+
+.logo-svg {
+  width: 9rem;
+  height: 2.75rem;
 }
 
 .navbar-light .header-logo-path {
@@ -42,7 +51,7 @@ body {
 }
 
 .header {
-  padding-top: 94px;
+  padding-top: 5.875rem;
   min-height: 100vh;
 }
 
@@ -51,7 +60,7 @@ body {
    background-size: cover;
    background-repeat: no-repeat;
    position: relative;
-   background-position: left 3px bottom -49px;
+   background-position: left .1875rem bottom -3.0625rem;
 }
 
 .header-image::before {
@@ -69,7 +78,7 @@ body {
 .header-logo {
   display: flex;
   align-items: center;
-  padding: 0px 50px;
+  padding: 0px 3.125rem;
   height: 100%;
   border-right: 1px solid rgba(235, 235, 240, 0.2);;
 }
@@ -78,16 +87,17 @@ body {
   flex-basis: 100%;
   display: flex;
   list-style: none;
-  padding: 0 50px;
+  padding: 0;
+  padding-left: 3.125rem;
   margin: 0;
 }
 
 .header-nav-link {
   text-decoration: none;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 160%;
-  margin-right: 50px;
+  margin-right: 3.125rem;
   color: inherit;
 }
 
@@ -95,80 +105,80 @@ body {
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: .625rem;
 }
 
 .header-phone-link {
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1rem;
   color: inherit;
-  margin-right: 50px;
+  margin-right: 3.125rem;
 }
 
 .button {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 160%;
   color: #FFFFFF;
   background: #5C8EE6;
   border: none;
-  padding: 25px 60px;
+  padding: 1.5625rem 3.75rem;
   cursor: pointer;
 }
 
 .navbar-button {
   flex-shrink: 0;
   height: 100%;
-  padding: 25px 34px 25px 49px;
+  padding: 1.5625rem 2.125rem 1.5625rem 3.0625rem;
 }
 
 .seporator {
   background: #5C8EE6;
-  width: 150px;
-  height: 2px; 
+  width: 9.375rem;
+  height: .125rem; 
 }
 
 .header-content {
-  padding-top: 150px;
+  padding-top: 9.375rem;
   position: relative;
   z-index: 1;
   color: #fff; 
-  padding-left: 9px;
+  padding-left: .5625rem;
 }
 
 .header-title {
-  max-width: 1080px;
+  max-width: 67.5rem;
   font-family: 'Bebas Neue';
-  font-size: 80px;
+  font-size: 5rem;
   line-height: 120%;
-  margin: 30px 0;
+  margin: 1.875rem 0;
     word-spacing: -1.6px;
     letter-spacing: 0.75px;
 
 }
 
 .header-text {
-  max-width: 720px;
+  max-width: 45rem;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 160%;
-  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
 }
 
 .header-features {
   display: flex;
-  min-height: 168px;
+  min-height: 10.5rem;
   padding: 0;
-  margin-top: 100px;
+  margin-top: 6.25rem;
   list-style: none;
   color: #fff;
   position: relative;
 }
 
 .header-features-item {
-  padding: 30px 57px;
+  padding: 1.875rem 3.5625rem;
   border: 1px solid rgba(235, 235, 240, 0.2);
-  width: 288px;
+  width: 18rem;
 }
 
 .header-features-item:not(:last-child) {
@@ -177,44 +187,44 @@ body {
 
 .header-features-text {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 160%;
   margin-bottom: 0;
-  margin-top: 18px;
+  margin-top: 1.125rem;
 }
 
 .section {
-  margin-top: 150px;
-  margin-bottom: 150px;
+  margin-top: 9.375rem;
+  margin-bottom: 9.375rem;
 }
 
 .section-title {
-  padding-left: 9px;
+  padding-left: .5625rem;
   font-family: 'Bebas Neue'; 
   font-style: normal;
   font-weight: 400;
-  font-size: 60px;
+  font-size: 3.75rem;
   line-height: 120%;
   color: #292D33;
-  margin-top: 30px;
-  margin-bottom: 52px;
+  margin-top: 1.875rem;
+  margin-bottom: 3.25rem;
 }
 
 .steps {
   display: flex;
   list-style-type: none;
-  padding: 0 0 0 9px;
-  gap: 30px;
+  padding: 0 0 0 .5625rem;
+  gap: 1.875rem;
 }
 
 .steps-item {
-  width: 330px;
+  width: 20.625rem;
 }
 
 .steps-num {
   font-family: 'Bebas Neue'; 
   font-weight: 400;
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 120%;
   color: #5C8EE6;
   display: flex;
@@ -226,33 +236,33 @@ body {
   height: 1px;
   background: #EBEBF0;
   width: 100%;
-  margin-left: 30px;
+  margin-left: 1.875rem;
 }
 
 .steps-title {
   font-weight: 400;
-  width: 300px;
-  font-size: 28px;
+  width: 18.75rem;
+  font-size: 1.75rem;
   line-height: 160%;
   color: #292D33;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  margin-top: 1.875rem;
+  margin-bottom: .625rem;
 }
 
 .steps-text {
-  width: 300px;
+  width: 18.75rem;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 160%;
   color: #828A99;
-  margin-bottom: 20px;
-  margin-top: 10px;
+  margin-bottom: 1.25rem;
+  margin-top: .625rem;
 }
 
 .steps-link {
   text-decoration:  none;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 160%;
   color: #5C8EE6;
   display: flex;
@@ -263,7 +273,13 @@ body {
   content: "";
   height: 1px;
   background: #5C8EE6;
-  width: 40px;
-  margin-right: 20px;
+  width: 2.5rem;
+  margin-right: 1.25rem;
+}
+
+@media (max-width: 1600px) {
+  html {
+    font-size: 14px;
+  }
 }
 
