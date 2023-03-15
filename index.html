@@ -12,10 +12,60 @@
     <title>Aliance Production</title>
   </head>
   <body>
+    <div class="mobile-menu">
+      <ul class="mobile-menu-nav">
+      <li class="mobile-menu-nav-item"><a href="#" class="mobile-menu-link">О компании</a></li>
+        <li class="mobile-menu-nav-item"><a href="#" class="mobile-menu-link">Контрактное производство</a>
+        <ul class="mobile-submenu">
+          <li class="mobile-submenu-item">
+            <a class="mobile-submenu-link" href="#">Автомобильная химия</a>
+          </li>
+          <li class="mobile-submenu-item">
+            <a class="mobile-submenu-link" href="#">Бытовая химия</a>
+          </li>
+          <li class="mobile-submenu-item">
+            <a class="mobile-submenu-link" href="#">Дезинфицирующие средства</a>
+          </li>
+          <li class="mobile-submenu-item">
+            <a class="mobile-submenu-link" href="#">Пищевые аэрозоли</a>
+          </li>
+          <li class="mobile-submenu-item">
+            <a class="mobile-submenu-link" href="#">Косметическая продукция</a>
+          </li>
+          <li class="mobile-submenu-item">
+            <a class="mobile-submenu-link" href="#">Краски аэрозольные</a>
+          </li>
+        </ul>
+      </li>
+        <li class="mobile-menu-nav-item"><a href="#" class="mobile-menu-link">Собственные торговые марки</a></li>
+        <li class="mobile-menu-nav-item"><a href="#" class="mobile-menu-link">Новости</a></li>
+        <li class="mobile-menu-nav-item"><a href="#" class="mobile-menu-link">Контакты</a></li>
+      </ul>
+      <a href="tel:+7499686-10-14" class="mobile-phone">+74996861014</a>
+      <div class="mobile-info">
+        <svg width="16" height="12" class="adress-logo">
+          <use href="img/sprite.svg#location"></use>
+          </svg>
+          <adress class="mobile-info-adress">г. Мосвка, Холодильный пер. 4к1с8</adress>
+      </div>
+      <!-- /.mobile-info -->
+      <div class="mobile-info">
+        <svg width="16" height="12" class="mail-logo">
+          <use href="img/sprite.svg#mail"></use>
+          </svg>
+          <a href="mailto: a.dragunov@tdaliance.ru" class="mobile-info-email">гa.dragunov@tdaliance.ru</a>
+      </div>
+      <!-- /.mobile-info -->
+    </div>
     <nav class="navbar">
+      <a href="" class="mobile-menu-toggle">
+        <div class="mobile-menu-line"></div>
+        <div class="mobile-menu-line"></div>
+        <div class="mobile-menu-line"></div>
+      </a>
       <a href="./" class="header-logo">
         <svg class="logo-svg">
-          <use href="img/sprite.svg#logo-light "></use>
+          <use href="img/sprite.svg#logo-light"></use>
           </svg>
       </a> 
       <ul class="header-nav">
@@ -32,7 +82,12 @@
         <a href="tel: +74996861014" class="header-phone-link">+7 (499) 686-10-14</a>
       </div>
       <!-- /.header-phone -->
-      <button class="navbar-button button">Получить консультацию</button>
+      <button class="navbar-button button">
+        <span class="button-text">Получить консультацию</span>
+        <svg class="button-icon" width="24" height="24">
+          <use href="img/sprite.svg#phone"></use>
+          </svg>
+      </button>
     </nav>
     <!-- /.navbar -->
     <header class="header header-image"> 
@@ -41,7 +96,7 @@
           <div class="seporator"></div>
           <h1 class="header-title">Комплексное обеспечение товарами и расходными материалами бизнеса</h1>
           <p class="header-text">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от анализа существующих паттернов поведения.</p>
-          <button class="button">Подробнее о компании</button>
+          <button class="header-button button">Подробнее о компании</button>
         </div>
         <!-- /.header-content --> 
         <ul class="header-features">
@@ -81,7 +136,7 @@
       <!-- /.container -->
     </header>
 
-    <div class="section section-light">
+    <section class="section section-light">
       <div class="container">
         <div class="seporator"></div>
         <h2 class="section-title">схема работы</h2>
@@ -110,7 +165,7 @@
         </ol>
       </div>
       <!-- /.container -->
-    </div>
+    </section>
     <!-- /.section section-light -->
 
     <script src="js/main.js"></script>
