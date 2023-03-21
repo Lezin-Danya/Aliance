@@ -182,8 +182,8 @@ body {
 }
 
 .header-features {
-  display: flex;
   min-height: 10.5rem;
+  display: flex;
   padding: 0;
   margin-top: 6.25rem;
   list-style: none;
@@ -191,10 +191,11 @@ body {
   position: relative;
 }
 
+
 .header-features-item {
   padding: 1.75rem 3.125rem;
+  height: auto;
   width: 18rem;
-  min-height: 100%;
   border: 1px solid rgba(235, 235, 240, 0.2);
 }
 

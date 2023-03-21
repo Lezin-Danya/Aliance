@@ -38,7 +38,6 @@ mMenuToggle.addEventListener('click', (e) => {
 
 const swiperSteps = new Swiper('.slider-steps', {
   speed: 400,
-  autoHeight: true,
   slidesPerView: 1,
   navigation: {
     nextEl: '.steps-button-next',
@@ -63,7 +62,6 @@ const swiperSteps = new Swiper('.slider-steps', {
 
 const swiper = new Swiper('.swiper', {
   speed: 400,
-  autoHeight: true,
   slidesPerView: 1,
   navigation: {
     nextEl: '.slider-button-next',
