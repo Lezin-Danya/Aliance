@@ -440,7 +440,7 @@ body {
     padding: 2rem;
   }
   .logo-svg {
-    max-width: 6rem;
+    max-width: 10rem;
   }
   .header-nav {
     padding-left: 2rem;
@@ -503,7 +503,7 @@ body {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    padding: 1.8em;
+    padding: 2rem 2.3rem;
     border-right: 1px solid rgba(235, 235, 240, 0.2);
   }
 
@@ -629,7 +629,10 @@ body {
     max-width: 40rem;
   }
   .header-title {
-    font-size: 4rem;
+    font-size: 3.5rem;
+    letter-spacing: 1.75px;
+    line-height: 124%;
+    margin-bottom: 17px;
   }
   .header-content {
     padding-top: 3rem;
@@ -643,12 +646,42 @@ body {
 
 @media (max-width: 576px) {
   .container {
-    max-width: 90%;
+    max-width: 96%;
   }
-  .header-title {
-    font-size: 2rem;
+  .seporator {
+    width: 6.25rem;
   }
   .header-content {
-    padding-top: 2rem;
+    padding-top: 3.2rem;
   }
+  .header-text {
+    padding-right: 33px;
+    margin-bottom: 37px;
+  }
+  .header-button {
+    padding: 21px 94px;
+  }
+  .header-features {
+    margin-top: 46px;
+  }
+  .section-title {
+    font-size: 36px;
+    margin-bottom: 29px;
+  }
+  .steps-num {
+    font-size: 48px;
+  }
+  .steps-title {
+    font-size: 20px;
+    margin-top: 8px;
+  }
+
+  .card-content {
+    padding: .9375rem 2.125rem;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
 }
