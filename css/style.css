@@ -24,7 +24,6 @@ body {
 .container {
    max-width: 90rem;
    margin: auto;
-   padding-left: 9px;
 }
 
 .navbar {
