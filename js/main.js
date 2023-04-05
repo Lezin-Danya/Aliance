@@ -88,4 +88,22 @@ const swiper = new Swiper('.swiper', {
 
 });
 
-
+const swiperBlog = new Swiper('.blog-slider', {
+  speed: 400,
+  slidesPerView: 2,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: '.blog-button-next',
+    prevEl: '.blog-button-prev',
+  },
+  breakpoints: {
+    // when window width is >= 576px
+    375: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+  }
+  
+})
