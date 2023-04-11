@@ -3,6 +3,11 @@ const logo = document.querySelector('.logo-svg use');
 const mMenuToggle = document.querySelector('.mobile-menu-toggle');
 const menu = document.querySelector('.mobile-menu');
 const clientLogo = document.querySelector('.clients-logo');
+const modal = document.querySelector('.modal ');
+const modalToggle = document.querySelectorAll('[data-toggle=modal]');
+const modalClose = document.querySelector('.modal-close');
+const modalDialog = document.querySelector('.modal-dialog');
+
 
 const lightModeOn = (e) => { // перекрашиваем лого в черный цвет
   navbar.classList.add('navbar-light')
@@ -35,6 +40,21 @@ window.addEventListener('scroll', ()=> {
 mMenuToggle.addEventListener('click', (e) => {
   e.preventDefault();
   menu.classList.contains('is-open') ? closeMenu() : openMenu();
+});
+
+document.addEventListener('click', e => {
+  if (e.target.dataset.toggle == "modal" || 
+  e.target.parentNode.dataset.toggle == "modal" || 
+  !e.composedPath().includes(modalDialog)
+  ) {
+    e.preventDefault();
+    modal.classList.toggle('is-open')
+  }
+});
+document.addEventListener('keyup', e => {
+  if (e.key == 'Escape' && modal.classList.contains('is-open')) {
+    modal.classList.toggle('is-open')
+  }
 });
 
 const swiperSteps = new Swiper('.slider-steps', {
