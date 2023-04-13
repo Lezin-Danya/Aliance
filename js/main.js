@@ -8,16 +8,15 @@ const modalToggle = document.querySelectorAll('[data-toggle=modal]');
 const modalClose = document.querySelector('.modal-close');
 const modalDialog = document.querySelector('.modal-dialog');
 
+// const lightModeOn = (e) => { // перекрашиваем лого в черный цвет
+//   navbar.classList.add('navbar-light')
+//   logo.href.baseVal = 'img/sprite.svg#logo'
+// }
 
-const lightModeOn = (e) => { // перекрашиваем лого в черный цвет
-  navbar.classList.add('navbar-light')
-  logo.href.baseVal = 'img/sprite.svg#logo'
-}
-
-const lightModeOff = (e) => {    //  перекрашиваем лого в белый цвет
-  navbar.classList.remove('navbar-light')
-  logo.href.baseVal = 'img/sprite.svg#logo-light'
-}
+// const lightModeOff = (e) => {    //  перекрашиваем лого в белый цвет
+//   navbar.classList.remove('navbar-light')
+//   logo.href.baseVal = 'img/sprite.svg#logo-light'
+// }
 
 const openMenu = (e) => {  // открытие меню
   menu.classList.add('is-open');
@@ -33,9 +32,9 @@ const closeMenu = (e) => {  // закрытие меню
   lightModeOff();
 }
 
-window.addEventListener('scroll', ()=> {
-  this.scrollY >1 ? lightModeOn() : lightModeOff()
-});
+// window.addEventListener('scroll', ()=> {
+//   this.scrollY >1 ? lightModeOn() : lightModeOff()
+// });
 
 mMenuToggle.addEventListener('click', (e) => {
   e.preventDefault();
@@ -43,14 +42,16 @@ mMenuToggle.addEventListener('click', (e) => {
 });
 
 document.addEventListener('click', e => {
-  if (e.target.dataset.toggle == "modal" || 
-  e.target.parentNode.dataset.toggle == "modal" || 
-  !e.composedPath().includes(modalDialog)
-  ) {
-    e.preventDefault();
-    modal.classList.toggle('is-open')
-  }
-});
+  if (
+    e.target.dataset.toggle == 'modal' || 
+    e.target.parentNode.dataset.toggle == 'modal' ||
+    modal.classList.contains('is-open') && !e.composedPath().includes(modalDialog)
+    ) {
+      e.preventDefault();
+      modal.classList.toggle('is-open');
+    }
+})
+
 document.addEventListener('keyup', e => {
   if (e.key == 'Escape' && modal.classList.contains('is-open')) {
     modal.classList.toggle('is-open')

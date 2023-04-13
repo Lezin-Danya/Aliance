@@ -44,6 +44,9 @@ body {
 .navbar-light {
   background-color: #fff;
   color: #292D33;;
+
+}
+.navbar-scroll {
   height: 4.5rem;
 }
 
