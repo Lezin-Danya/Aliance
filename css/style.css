@@ -41,11 +41,20 @@ body {
   transition: background-color, .2s height .2s;
 }
 
+.logo-dark {
+  display: none;
+}
 .navbar-light {
   background-color: #fff;
   color: #292D33;;
-
 }
+.navbar-light .logo-light {
+  display: none;
+}
+.navbar-light .logo-dark {
+  display: block;
+}
+
 .navbar-scroll {
   height: 4.5rem;
 }
@@ -647,6 +656,10 @@ body {
 
   .bg-grey {
     background: #F0F2F5;
+  }
+
+  .cta {
+    margin-top: 225px;
   }
 
   .section-cta {

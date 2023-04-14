@@ -7,16 +7,19 @@ const modal = document.querySelector('.modal ');
 const modalToggle = document.querySelectorAll('[data-toggle=modal]');
 const modalClose = document.querySelector('.modal-close');
 const modalDialog = document.querySelector('.modal-dialog');
+const isFront = document.body.classList.contains('front-page');
 
-// const lightModeOn = (e) => { // перекрашиваем лого в черный цвет
-//   navbar.classList.add('navbar-light')
-//   logo.href.baseVal = 'img/sprite.svg#logo'
-// }
+const lightModeOn = (e) => { // перекрашиваем лого в черный цвет
+  navbar.classList.add('navbar-light')
+};
 
-// const lightModeOff = (e) => {    //  перекрашиваем лого в белый цвет
-//   navbar.classList.remove('navbar-light')
-//   logo.href.baseVal = 'img/sprite.svg#logo-light'
-// }
+const lightModeOff = (e) => {    //  перекрашиваем лого в белый цвет
+  navbar.classList.remove('navbar-light')
+};
+
+const changeNavHeight = (height) => {  // меняем высоту navbar
+  navbar.style.height = height;
+}
 
 const openMenu = (e) => {  // открытие меню
   menu.classList.add('is-open');
@@ -32,9 +35,12 @@ const closeMenu = (e) => {  // закрытие меню
   lightModeOff();
 }
 
-// window.addEventListener('scroll', ()=> {
-//   this.scrollY >1 ? lightModeOn() : lightModeOff()
-// });
+window.addEventListener('scroll', ()=> {
+  this.scrollY >1 ? changeNavHeight('4.5rem') : changeNavHeight('5.875rem')
+  if (isFront) {
+    this.scrollY >1 ? lightModeOn() : lightModeOff()
+  }
+});
 
 mMenuToggle.addEventListener('click', (e) => {
   e.preventDefault();
