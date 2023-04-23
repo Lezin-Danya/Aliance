@@ -9,6 +9,9 @@ const modalClose = document.querySelector('.modal-close');
 const modalDialog = document.querySelector('.modal-dialog');
 const isFront = document.body.classList.contains('front-page');
 
+console.log('adgasgag');
+
+
 const lightModeOn = (e) => { // перекрашиваем лого в черный цвет
   navbar.classList.add('navbar-light')
 };
@@ -132,5 +135,50 @@ const swiperBlog = new Swiper('.blog-slider', {
       slidesPerView: 2,
     },
   }
-  
-})
+});
+
+const forms = document.querySelectorAll('form');
+forms.forEach(form => {
+  const validation = new JustValidate(form, {
+    errorFieldCssClass: 'is-invalid',
+});
+validation
+  .addField('[name=username]', [
+    {
+      rule: 'required',  // дб обязательно заполнено
+      errorMessage: 'Укажите имя',
+    },
+    {
+      rule: 'maxLength',
+      value: 50,
+      errorMessage: 'Максимально 30 символов ',
+    },
+  ])
+  .addField('[name=userphone]', [
+    {
+      rule: 'required',
+      errorMessage: 'Укажите телефон',
+    },
+  ])
+  .onSuccess((event) => {
+    const thisForm = event.target;
+    const formData =  new FormData(thisForm);
+    console.log(1);
+
+    const ajaxSend = (formData) => {
+      fetch(thisForm.getAttribute('action'), {
+        method: thisForm.getAttribute('action'),
+        body: formData,
+      }).then((response) => {
+        if (response.ok) {
+          thisForm.reset();
+          alert('Заявка отправлена')
+        } else {
+          alert("Текст ошибки: " . response.statusText)
+        }
+      })
+    };
+    ajaxSend(formData);
+  });
+});
+

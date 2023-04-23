@@ -7,12 +7,12 @@
             <p class="cta-form-text">Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время ответит на все интересующие вопросы и поможем даже в самых сложных случаях!</p>
             <div class="input-group-wrapper">
               <div class="input-group">
-                <input id="user-name" type="text" class="input" name="username" placeholder=" ">
+                <input id="user-name" type="text" class="input" name="username" placeholder=" " maxlength="100">
                 <label for="user-name" class="input-group-label">Имя</label>
               </div>
               <!-- /.input-group -->
               <div class="input-group">
-                <input id="user-phone" type="tel" class="input" name="userphone" placeholder=" ">
+                <input id="user-phone" type="tel" class="input" name="userphone" placeholder=" " maxlength="30">
                 <label for="user-phone" class="input-group-label">Номер телефона</label>
               </div>
               <!-- /.input-group -->
@@ -141,15 +141,15 @@
             </svg>
         </a>
         <p class="modal-text">Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время ответит на все интересующие вопросы и поможем даже в самых сложных случаях!</p>
-        <form action="#" class="modal-form">
+        <form action="handler.php" method="POST" class="modal-form">
           <div class="input-group-wrapper input-group-vertical">
             <div class="input-group modal-input-group">
-              <input id="modal-user-name" type="text" class="input modal-input" placeholder=" ">
+              <input id="modal-user-name" type="text" class="input modal-input" placeholder=" " name="username">
               <label for="modal-user-name" class="input-group-label modal-input-label">Имя</label>
             </div>
             <!-- /.input-group -->
             <div class="input-group modal-input-group">
-              <input id="modal-user-phone" type="tel" class="input modal-input" placeholder=" ">
+              <input id="modal-user-phone" type="tel" class="input modal-input" placeholder=" " name="userphone">
               <label for="modal-user-phone" class="input-group-label modal-input-label">Номер телефона</label>
             </div>
             <!-- /.input-group -->
@@ -170,3 +170,9 @@
         </form>
       </div>
     </div>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/just-validate.production.min.js"></script>
+    <script src="js/maskPhone.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
