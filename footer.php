@@ -12,7 +12,7 @@
               </div>
               <!-- /.input-group -->
               <div class="input-group">
-                <input id="user-phone" type="tel" class="input" name="userphone" placeholder=" " maxlength="30">
+                <input id="user-phone" type="tel" class="input phone-mask" name="userphone" placeholder=" " maxlength="30">
                 <label for="user-phone" class="input-group-label">Номер телефона</label>
               </div>
               <!-- /.input-group -->

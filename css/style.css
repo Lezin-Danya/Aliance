@@ -747,7 +747,7 @@ body {
   padding: 0 10px;
 }
 .input:focus {
-  border: 10px solid #5C8EE6;
+  border: 1px solid #5C8EE6;
   outline: 0;
 }
 .input:focus ~.input-group-label,
