@@ -3,14 +3,37 @@ const logo = document.querySelector('.logo-svg use');
 const mMenuToggle = document.querySelector('.mobile-menu-toggle');
 const menu = document.querySelector('.mobile-menu');
 const clientLogo = document.querySelector('.clients-logo');
-const modal = document.querySelector('.modal ');
 const modalToggle = document.querySelectorAll('[data-toggle=modal]');
 const modalClose = document.querySelector('.modal-close');
-const modalDialog = document.querySelector('.modal-dialog');
 const isFront = document.body.classList.contains('front-page');
 
-console.log('adgasgag');
+let currentModal;  // текущее модальное окно
+let modalDialog;  // белое диалоговое окно
+let alertModal = document.querySelector('#alert-modal'); // окно с предупреждением
+const modalButtons = document.querySelectorAll("[data-toggle=modal"); // переключатели модальных окон
 
+modalButtons.forEach(item => {   // клик по переключателю
+  item.addEventListener('click', e=> {
+    e.preventDefault();
+    // определяем текущее открытое окно
+      currentModal = document.querySelector(item.dataset.target); 
+      // открываем текущее окно
+      currentModal.classList.toggle('is-open');
+      // назаначаем текущее диалоговое окно
+      modalDialog = currentModal.querySelector('.modal-dialog');
+      currentModal.addEventListener('click', event => {
+        if (!event.composedPath().includes(modalDialog)) {
+        currentModal.classList.remove('is-open');
+       };
+      });
+  });
+});
+
+document.addEventListener('keyup', e => {
+  if (e.key == 'Escape' && currentModal.classList.contains('is-open')) {
+    currentModal.classList.toggle('is-open')
+  }
+});
 
 const lightModeOn = (e) => { // перекрашиваем лого в черный цвет
   navbar.classList.add('navbar-light')
@@ -36,7 +59,7 @@ const closeMenu = (e) => {  // закрытие меню
   document.body.style.overflow='';
   mMenuToggle.classList.remove('close-menu');
   lightModeOff();
-}
+};
 
 window.addEventListener('scroll', ()=> {
   this.scrollY >1 ? changeNavHeight('4.5rem') : changeNavHeight('5.875rem')
@@ -48,23 +71,6 @@ window.addEventListener('scroll', ()=> {
 mMenuToggle.addEventListener('click', (e) => {
   e.preventDefault();
   menu.classList.contains('is-open') ? closeMenu() : openMenu();
-});
-
-document.addEventListener('click', e => {
-  if (
-    e.target.dataset.toggle == 'modal' || 
-    e.target.parentNode.dataset.toggle == 'modal' ||
-    modal.classList.contains('is-open') && !e.composedPath().includes(modalDialog)
-    ) {
-      e.preventDefault();
-      modal.classList.toggle('is-open');
-    }
-})
-
-document.addEventListener('keyup', e => {
-  if (e.key == 'Escape' && modal.classList.contains('is-open')) {
-    modal.classList.toggle('is-open')
-  }
 });
 
 const swiperSteps = new Swiper('.slider-steps', {
@@ -89,7 +95,7 @@ const swiperSteps = new Swiper('.slider-steps', {
     }
 
   }
-})
+});
 
 const swiper = new Swiper('.swiper', {
   speed: 400,
@@ -163,7 +169,7 @@ validation
   .onSuccess((event) => {
     const thisForm = event.target;
     const formData =  new FormData(thisForm);
-    console.log(1);
+    console.log('форма отправлена');
 
     const ajaxSend = (formData) => {
       fetch(thisForm.getAttribute('action'), {
@@ -172,16 +178,26 @@ validation
       }).then((response) => {
         if (response.ok) {
           thisForm.reset();
-          alert('Заявка отправлена')
-        } else {
-          alert("Текст ошибки: " . response.statusText)
-        }
+          currentModal.classList.remove('is-open');
+          alertModal.classList.add('is-open');
+          currentModal = alertModal;
+          modalDialog = currentModal.querySelector('.modal-dialog');
+          currentModal.addEventListener('click', event => {
+            if (!event.composedPath().includes(modalDialog)) {
+            currentModal.classList.remove('is-open');
+           };
+          });
+
+          } else {
+            alert("Текст ошибки: " . response.statusText)
+          }
       })
     };
     ajaxSend(formData);
   });
 });
 
+// МАСKА ТЕЛЕФОНА
 /* Создаем префикс +7, даже если вводят 8 или 9 */	
 const prefixNumber = (str) => {	
   /* если вводят семерку, добавляем ей скобку */	

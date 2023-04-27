@@ -19,7 +19,7 @@
             </div>
             <!-- /.input-group-wrapper -->
             <div class="cta-form-footer">
-              <button type="submit" class="button cta-form-button">Отправить заявку</button>
+              <button type="submit" class="button cta-form-button phone-mask">Отправить заявку</button>
               <div class="notify">
                 <svg width="14" height="14" class="notify-icon">
                   <use href="img/sprite.svg#shield"></use>
@@ -132,10 +132,10 @@
       <!-- /.container -->
     </footer>
     <!-- /.footer -->
-    <div class="modal">
+    <div class="modal" id="feedback-modal">
       <div class="modal-dialog">
         <h2 class="modal-title">Есть вопросы?</h2>
-        <a href="" class="modal-close" data-toggle="modal">
+        <a href="" class="modal-close" data-toggle="modal" data-target="#feedback-modal">
           <svg width="51" height="11" class="close-icon" width="24" height="24" data-toggle="modal">
             <use href="img/sprite.svg#close"></use>
             </svg>
@@ -149,14 +149,14 @@
             </div>
             <!-- /.input-group -->
             <div class="input-group modal-input-group">
-              <input id="modal-user-phone" type="tel" class="input modal-input" placeholder=" " name="userphone">
+              <input id="modal-user-phone" type="tel" class="input modal-input phone-mask" placeholder=" " name="userphone">
               <label for="modal-user-phone" class="input-group-label modal-input-label">Номер телефона</label>
             </div>
             <!-- /.input-group -->
           </div>
           <!-- /.input-group-wrapper -->
           <div class="modal-form-footer">
-            <button type="submit" class="button modal-form-button">Отправить заявку</button>
+            <button type="submit" class="button modal-form-button phone-mask">Отправить заявку</button>
             <div class="notify">
               <svg width="14" height="14" class="notify-icon">
                 <use href="img/sprite.svg#shield"></use>
@@ -170,9 +170,23 @@
         </form>
       </div>
     </div>
+    <div class="modal" id="alert-modal">
+      <div class="modal-dialog">
+        <svg width="360" height="310">
+            <use href="img/sprite.svg#thanks-modal"></use>
+          </svg>
+        <h2 class="modal-title">Спасибо за заявку!</h2>
+        <a href="" class="modal-close" data-toggle="modal" data-target="#alert-modal">
+          <svg class="close-icon" width="24" height="24" data-toggle="modal" data-target="#alert-modal">
+            <use href="img/sprite.svg#close"></use>
+          </svg>
+        </a>
+        <p class="modal-text">Наш менеджер свяжется с Вами в ближайшее время ответит на все интересующие вопросы и поможем даже в самых сложных случаях!</p>
+        <button type="submit" class="button modal-form-button phone-mask">Отправить заявку</button>
+      </div>
+    </div>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/just-validate.production.min.js"></script>
-    <script src="js/maskPhone.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
