@@ -7,16 +7,19 @@ const modalToggle = document.querySelectorAll('[data-toggle=modal]');
 const modalClose = document.querySelector('.modal-close');
 const isFront = document.body.classList.contains('front-page');
 
+console.log(1);
+
 let currentModal;  // текущее модальное окно
 let modalDialog;  // белое диалоговое окно
 let alertModal = document.querySelector('#alert-modal'); // окно с предупреждением
-const modalButtons = document.querySelectorAll("[data-toggle=modal"); // переключатели модальных окон
+const modalButtons = document.querySelectorAll("[data-toggle=modal]"); // переключатели модальных окон
 
 modalButtons.forEach(item => {   // клик по переключателю
   item.addEventListener('click', e=> {
     e.preventDefault();
     // определяем текущее открытое окно
       currentModal = document.querySelector(item.dataset.target); 
+      console.log(e.target);
       // открываем текущее окно
       currentModal.classList.toggle('is-open');
       // назаначаем текущее диалоговое окно

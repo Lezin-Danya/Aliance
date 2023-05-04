@@ -136,7 +136,7 @@
       <div class="modal-dialog">
         <h2 class="modal-title">Есть вопросы?</h2>
         <a href="" class="modal-close" data-toggle="modal" data-target="#feedback-modal">
-          <svg width="51" height="11" class="close-icon" width="24" height="24" data-toggle="modal">
+          <svg width="51" height="11" class="close-icon" width="24" height="24">
             <use href="img/sprite.svg#close"></use>
             </svg>
         </a>
@@ -177,12 +177,12 @@
           </svg>
         <h2 class="modal-title">Спасибо за заявку!</h2>
         <a href="" class="modal-close" data-toggle="modal" data-target="#alert-modal">
-          <svg class="close-icon" width="24" height="24" data-toggle="modal" data-target="#alert-modal">
+          <svg class="close-icon" width="24" height="24">
             <use href="img/sprite.svg#close"></use>
           </svg>
         </a>
         <p class="modal-text">Наш менеджер свяжется с Вами в ближайшее время ответит на все интересующие вопросы и поможем даже в самых сложных случаях!</p>
-        <button type="submit" class="button modal-form-button phone-mask">Отправить заявку</button>
+        <a href="./" class="button modal-form-button modal-link">Вернуться на главную</a>
       </div>
     </div>
     <script src="js/swiper-bundle.min.js"></script>

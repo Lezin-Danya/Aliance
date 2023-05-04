@@ -86,7 +86,7 @@
         <a href="tel:+74996861014" class="header-phone-link">+7 (499) 686-10-14</a>
       </div>
       <!-- /.header-phone -->
-      <button class="navbar-button button" data-toggle="modal">
+      <button class="navbar-button button" data-toggle="modal" data-target="#feedback-modal">
         <span class="button-text">Получить консультацию</span>
         <svg class="button-icon" width="24" height="24">
           <use href="img/sprite.svg#phone"></use>
@@ -261,31 +261,7 @@
           <!-- /. container -->
     </section>
     <!-- /.section production -->
-    <section class="section trademark">
-      <div class="container">
-        <div class="seporator"></div>
-        <h2 class="section-title">собственные торговые марки</h2>
-        <div class="trademark-cards">
-          <div class="trademark-card">
-            <svg class="trademark-card-logo">
-              <use href="img/sprite.svg#AGTECH"></use>
-              </svg>
-            <h3 class="trademark-card-title">Автохимия AG-Tech</h3>
-            <p class="trademark-card-text">Для современного мира разбавленное изрядной долей эмпатии, рациональное мышление создаёт предпосылки для поставленных обществом задач.</p>
-          </div>
-          <div class="trademark-card">
-            <svg class="trademark-card-logo">
-              <use href="img/sprite.svg#AP"></use>
-              </svg>
-            <h3 class="trademark-card-title">Автохимия AP</h3>
-            <p class="trademark-card-text">Для современного мира разбавленное изрядной долей эмпатии, рациональное мышление создаёт предпосылки для поставленных обществом задач.</p>
-          </div>
-        </div>
-        <!-- /.trademark-cards -->   
-      </div>
-      <!-- /.container -->
-    </section>
-    <!-- /.section trademark -->
+  <?php $block_title= "Собственные торговые марки"; include_once('./template-parts/trademarks-blocks.php')?>
     <section class="section founder">
       <img class="founder-photo" src="img/founder.jpg" alt="founder">
       <div class="container">
