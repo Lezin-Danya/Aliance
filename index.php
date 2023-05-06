@@ -16,7 +16,7 @@
     <div class="mobile-menu">
       <ul class="mobile-menu-nav">
       <li class="mobile-menu-nav-item"><a href="./about.php" class="mobile-menu-link">О компании</a></li>
-        <li class="mobile-menu-nav-item"><a href="#" class="mobile-menu-link">Контрактное производство</a>
+        <li class="mobile-menu-nav-item"><a href="./contracts.php" class="mobile-menu-link">Контрактное производство</a>
         <ul class="mobile-submenu">
           <li class="mobile-submenu-item">
             <a class="mobile-submenu-link" href="#">Автомобильная химия</a>
@@ -38,9 +38,9 @@
           </li>
         </ul>
       </li>
-        <li class="mobile-menu-nav-item"><a href="#" class="mobile-menu-link">Собственные торговые марки</a></li>
-        <li class="mobile-menu-nav-item"><a href="#" class="mobile-menu-link">Новости</a></li>
-        <li class="mobile-menu-nav-item"><a href="#" class="mobile-menu-link">Контакты</a></li>
+        <li class="mobile-menu-nav-item"><a href="./trademarks.php" class="mobile-menu-link">Собственные торговые марки</a></li>
+        <li class="mobile-menu-nav-item"><a href="./news.php" class="mobile-menu-link">Новости</a></li>
+        <li class="mobile-menu-nav-item"><a href="./contacts.php" class="mobile-menu-link">Контакты</a></li>
       </ul>
       <a href="tel:+74796861014" class="mobile-phone">+74796861014</a>
       <div class="mobile-info">
@@ -103,57 +103,7 @@
           <button class="header-button button" data-toggle="modal" data-target="#feedback-modal">Подробнее о компании</button>
         </div>
         <!-- /.header-content --> 
-        <!--Основной блок слайдера -->
-      <div class="swiper">
-        <!-- Обертка слайдера -->
-        <ul class="swiper-wrapper header-features">
-          <!-- Слайды -->
-          <li class="swiper-slide header-features-item">
-            <svg width="36" height="36">
-            <use href="img/sprite.svg#time"></use>
-            </svg>
-            <p class="header-features-text">Непрерывная работа c 2017 года</p>
-        </li>
-          <li class="swiper-slide header-features-item">
-            <svg width="36" height="36">
-            <use href="img/sprite.svg#certificate"></use>
-            </svg>
-            <p class="header-features-text">Вся продукция сертифицирована</p>
-        </li>
-          <li class="swiper-slide header-features-item">
-            <svg width="36" height="36">
-              <use href="img/sprite.svg#quality"></use>
-              </svg>
-              <p class="header-features-text">Контроль качества на всех этапах</p>
-          </li>
-          <li class="swiper-slide header-features-item">
-            <svg width="36" height="36">
-              <use href="img/sprite.svg#delivery"></use>
-              </svg>
-              <p class="header-features-text">Возможны поставки по всей России</p>
-          </li>
-          <li class="swiper-slide header-features-item">
-            <svg width="36" height="36">
-              <use href="img/sprite.svg#manufacture"></use>
-              </svg>
-              <p class="header-features-text">Оперативное производство</p>
-          </li>
-        </ul>
-        <!-- кнопки навигации -->
-        <div class="slider-buttons">
-          <div class="slider-button-prev">
-            <svg width="36" height="24">
-              <use href="img/sprite.svg#arrow-prev"></use>
-              </svg>
-          </div>
-          <div class="slider-button-next">
-            <svg width="36" height="24">
-              <use href="img/sprite.svg#arrow-next"></use>
-              </svg>
-          </div>
-        </div>
-        <!-- /.slider-buttons -->
-      </div>
+        <?php include_once('./template-parts/header-slider.php')?>
       </div>
       <!-- /.container -->
     </header>
@@ -207,61 +157,10 @@
       <!-- /.container -->
     </section>
     <!-- /.section section-light -->
+    
+    <?php $block_title= "Контрактное производство"; include_once('./template-parts/production-block.php')?>
 
-    <section class="section production">
-      <div class="container">
-        <div class="seporator"></div>
-        <h2 class="section-title">Контрактное производство</h2>
-        <div class="cards">
-          <div class="card">
-            <div class="card-content">
-              <h3 class="card-title">Автомобильная химия</h3>
-              <p class="card-text">Безусловно, сплочённость команды профессионалов позволяет оценить значение форм воздействия.</p>
-            </div>
-            <img src="img/0503577001614868834 1-1.png" alt="" class="card-image">
-          </div>
-          <a href="#" class="card">
-            <div class="card-content">
-              <h3 class="card-title">Бытовая химия</h3>
-              <p class="card-text">А также стремящиеся вытеснить традиционное производство, нанотехнологии функционально разнесены на независимые элементы.</p>
-            </div>
-            <img src="img/Без имени-2 1.png" alt="" class="card-image">
-          </a>
-          <a href="#" class="card">
-            <div class="card-content">
-              <h3 class="card-title">Дезинфицирующие средства</h3>
-              <p class="card-text">Лишь интерактивные прототипы призваны к ответу.</p>
-            </div>
-            <img src="img/5dd4c227c7dc6914837490 1-1.png" alt="" class="card-image">
-          </a>
-          <a href="#" class="card">
-            <div class="card-content">
-              <h3 class="card-title">Пищевые аэрозоли</h3>
-              <p class="card-text">Безусловно, сплочённость команды профессионалов позволяет оценить значение форм воздействия.</p>
-            </div>
-            <img src="img/5dd4c227c7dc6914837490 1.png" alt="" class="card-image">
-          </a>
-          <a href="#" class="card">
-            <div class="card-content">
-              <h3 class="card-title">Косметическая продукция</h3>
-              <p class="card-text">Лишь интерактивные прототипы призваны к ответу.</p>
-            </div>
-            <img src="img/0503577001614868834 1.png" alt="" class="card-image">
-          </a>
-          <a href="#" class="card">
-            <div class="card-content">
-              <h3 class="card-title">Краски аэрозольные</h3>
-              <p class="card-text">А также стремящиеся вытеснить традиционное производство, нанотехнологии функционально разнесены на независимые элементы.</p>
-            </div>
-            <img src="img/Без имени-2 1.png" alt="" class="card-image">
-          </a>
-        </div>
-        <!-- /.cards-->
-      </div>
-          <!-- /. container -->
-    </section>
-    <!-- /.section production -->
-  <?php $block_title= "Собственные торговые марки"; include_once('./template-parts/trademarks-blocks.php')?>
+    <?php $block_title= "Собственные торговые марки"; include_once('./template-parts/trademarks-blocks.php')?>
     <section class="section founder">
       <img class="founder-photo" src="img/founder.jpg" alt="founder">
       <div class="container">
