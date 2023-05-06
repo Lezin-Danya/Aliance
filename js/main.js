@@ -19,7 +19,6 @@ modalButtons.forEach(item => {   // клик по переключателю
     e.preventDefault();
     // определяем текущее открытое окно
       currentModal = document.querySelector(item.dataset.target); 
-      console.log(e.target);
       // открываем текущее окно
       currentModal.classList.toggle('is-open');
       // назаначаем текущее диалоговое окно
@@ -170,18 +169,21 @@ validation
     },
   ])
   .onSuccess((event) => {
-    const thisForm = event.target;
-    const formData =  new FormData(thisForm);
+    const thisForm = event.target;  // наша форма
+    const formData =  new FormData(thisForm); // данные из формы
     console.log('форма отправлена');
 
     const ajaxSend = (formData) => {
       fetch(thisForm.getAttribute('action'), {
-        method: thisForm.getAttribute('action'),
+        method: thisForm.getAttribute('method'),
         body: formData,
       }).then((response) => {
         if (response.ok) {
+          console.log('статус ok');
           thisForm.reset();
-          currentModal.classList.remove('is-open');
+           if  (currentModal ) {
+            currentModal.classList.remove('is-open') 
+          };
           alertModal.classList.add('is-open');
           currentModal = alertModal;
           modalDialog = currentModal.querySelector('.modal-dialog');
@@ -190,11 +192,10 @@ validation
             currentModal.classList.remove('is-open');
            };
           });
-
           } else {
             alert("Текст ошибки: " . response.statusText)
           }
-      })
+      });
     };
     ajaxSend(formData);
   });
