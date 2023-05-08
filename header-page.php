@@ -15,11 +15,11 @@
 <body>
   <div class="mobile-menu">
     <ul class="mobile-menu-nav">
-    <li class="mobile-menu-nav-item"><a href="#" class="mobile-menu-link">О компании</a></li>
-      <li class="mobile-menu-nav-item"><a href="#" class="mobile-menu-link">Контрактное производство</a>
+    <li class="mobile-menu-nav-item"><a href="./about.php" class="mobile-menu-link">О компании</a></li>
+      <li class="mobile-menu-nav-item"><a href="./contracts.php" class="mobile-menu-link">Контрактное производство</a>
       <ul class="mobile-submenu">
         <li class="mobile-submenu-item">
-          <a class="mobile-submenu-link" href="#">Автомобильная химия</a>
+          <a class="mobile-submenu-link" href="./autochem.php">Автомобильная химия</a>
         </li>
         <li class="mobile-submenu-item">
           <a class="mobile-submenu-link" href="#">Бытовая химия</a>
@@ -99,7 +99,7 @@
       <div class="seporator"></div>
       <h1 class="header-section-title"><?= $page_title?></h1>
       <ul class="header-section-list">
-        <li class="header-section-list-item"><a href="#" class="header-section-link">Главная</a></li>
+        <li class="header-section-list-item"><a href="./" class="header-section-link">Главная</a></li>
         <li class="header-section-list-item"><a href="#" class="header-section-link"><?= $page_title?></a></li>
       </ul>
     </div>
