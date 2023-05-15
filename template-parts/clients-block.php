@@ -69,68 +69,77 @@
           </div>
           <!-- /.clients-content -->
           <div class="clients-logo-list">
-            <a href="#" class="clients-logo-item">  
-              <picture class="client-logo">
+          <a href="#" class="clients-logo-item">
+                <img src="img/client.png" alt="client" class="clients-logo">
+              <!-- <picture class="clients-logo">
                 <source type="image/webp" srcset="img/client.webp">
                 <source type="image/jpeg" srcset="img/client.png">
                 <img src="img/client.png" alt="client">
-              </picture>
+              </picture> -->
             </a>
-            <a href="#" class="clients-logo-item">  
-              <picture class="client-logo">
+            <a href="#" class="clients-logo-item">
+                <img src="img/client.png" alt="client" class="clients-logo">
+              <!-- <picture class="clients-logo">
                 <source type="image/webp" srcset="img/client.webp">
                 <source type="image/jpeg" srcset="img/client.png">
                 <img src="img/client.png" alt="client">
-              </picture>
+              </picture> -->
             </a>
-            <a href="#" class="clients-logo-item">  
-              <picture class="client-logo">
+            <a href="#" class="clients-logo-item">
+                <img src="img/client.png" alt="client" class="clients-logo">
+              <!-- <picture class="clients-logo">
                 <source type="image/webp" srcset="img/client.webp">
                 <source type="image/jpeg" srcset="img/client.png">
                 <img src="img/client.png" alt="client">
-              </picture>
+              </picture> -->
             </a>
-            <a href="#" class="clients-logo-item">  
-              <picture class="client-logo">
+            <a href="#" class="clients-logo-item">
+                <img src="img/client.png" alt="client" class="clients-logo">
+              <!-- <picture class="clients-logo">
                 <source type="image/webp" srcset="img/client.webp">
                 <source type="image/jpeg" srcset="img/client.png">
                 <img src="img/client.png" alt="client">
-              </picture>
+              </picture> -->
             </a>
-            <a href="#" class="clients-logo-item">  
-              <picture class="client-logo">
+            <a href="#" class="clients-logo-item">
+                <img src="img/client.png" alt="client" class="clients-logo">
+              <!-- <picture class="clients-logo">
                 <source type="image/webp" srcset="img/client.webp">
                 <source type="image/jpeg" srcset="img/client.png">
                 <img src="img/client.png" alt="client">
-              </picture>
+              </picture> -->
             </a>
-            <a href="#" class="clients-logo-item">  
-              <picture class="client-logo">
+            <a href="#" class="clients-logo-item">
+                <img src="img/client.png" alt="client" class="clients-logo">
+              <!-- <picture class="clients-logo">
                 <source type="image/webp" srcset="img/client.webp">
                 <source type="image/jpeg" srcset="img/client.png">
                 <img src="img/client.png" alt="client">
-              </picture>
+              </picture> -->
             </a>
-            <a href="#" class="clients-logo-item">  
-              <picture class="client-logo">
+            <a href="#" class="clients-logo-item">
+                <img src="img/client.png" alt="client" class="clients-logo">
+              <!-- <picture class="clients-logo">
                 <source type="image/webp" srcset="img/client.webp">
                 <source type="image/jpeg" srcset="img/client.png">
                 <img src="img/client.png" alt="client">
-              </picture>
+              </picture> -->
             </a>
-            <a href="#" class="clients-logo-item">  
-              <picture class="client-logo">
+            <a href="#" class="clients-logo-item">
+                <img src="img/client.png" alt="client" class="clients-logo">
+              <!-- <picture class="clients-logo">
                 <source type="image/webp" srcset="img/client.webp">
                 <source type="image/jpeg" srcset="img/client.png">
                 <img src="img/client.png" alt="client">
-              </picture>
+              </picture> -->
             </a>
-            <a href="#" class="clients-logo-item">  
-              <picture class="client-logo">
+            <a href="#" class="clients-logo-item">
+                <img src="img/client.png" alt="client" class="clients-logo">
+              <!-- <picture class="clients-logo">
                 <source type="image/webp" srcset="img/client.webp">
                 <source type="image/jpeg" srcset="img/client.png">
                 <img src="img/client.png" alt="client">
-              </picture>
+              </picture> -->
             </a>
           </div>
           <!-- /.clients-logo -->

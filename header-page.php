@@ -95,12 +95,13 @@
   </nav>
   <!-- /.navbar -->
   <header class="header-section <?= $header_style?>">
+  <img src="img/autochem-header-img.png" alt="autochemistry" class="autochem-header-img">
     <div class="container">
       <div class="seporator"></div>
       <h1 class="header-section-title"><?= $page_title?></h1>
       <ul class="header-section-list">
         <li class="header-section-list-item"><a href="./" class="header-section-link">Главная</a></li>
-        <li class="header-section-list-item"><a href="#" class="header-section-link"><?= $page_title?></a></li>
+        <li class="header-section-list-item active"><a href="#" class="header-section-link"><?= $page_title?></a></li>
       </ul>
     </div>
     <!-- /.container -->

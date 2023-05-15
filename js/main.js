@@ -6,8 +6,11 @@ const clientLogo = document.querySelector('.clients-logo');
 const modalToggle = document.querySelectorAll('[data-toggle=modal]');
 const modalClose = document.querySelector('.modal-close');
 const isFront = document.body.classList.contains('front-page');
+const isComapny = document.querySelector('.header-section-title');
+const swiperItem = document.querySelectorAll('.header-features-item');
+const pageSliderCard = document.querySelectorAll('.page-slider-card');
+const cta = document.querySelector('.cta');
 
-console.log(1);
 
 let currentModal;  // текущее модальное окно
 let modalDialog;  // белое диалоговое окно
@@ -70,6 +73,26 @@ window.addEventListener('scroll', ()=> {
   }
 });
 
+// красим текст слайдера в черный
+if (isComapny) {  
+  swiperItem.forEach(i => {
+    i.style.color = '#000'
+  })
+};
+
+// скрываем секцию 
+if (isComapny && isComapny.textContent == "Политика конфиденциальности") {
+  cta.style.display = 'none';
+}
+
+// показываем картинку в хедере 
+const autochemImg = document.querySelector('.autochem-header-img');
+
+if (isComapny && isComapny.textContent == "Автомобильная химия") {
+  autochemImg.style.display = "block";
+}
+
+
 mMenuToggle.addEventListener('click', (e) => {
   e.preventDefault();
   menu.classList.contains('is-open') ? closeMenu() : openMenu();
@@ -129,6 +152,27 @@ const swiper = new Swiper('.swiper', {
 const swiperBlog = new Swiper('.blog-slider', {
   speed: 400,
   slidesPerView: 2,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: '.blog-button-next',
+    prevEl: '.blog-button-prev',
+  },
+  breakpoints: {
+    // when window width is >= 576px
+    375: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+  }
+});
+
+const swiperSectionBlog = new Swiper('.page-blog-slider', {
+  centeredSlides: true,
+  loop: true,
+  speed: 400,
+  slidesPerView: 3,
   spaceBetween: 30,
   navigation: {
     nextEl: '.blog-button-next',

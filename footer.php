@@ -1,5 +1,10 @@
 <section class="cta">
       <div class="bg-grey section-cta">
+           <!-- <picture class="cta-image">
+              <source type="image/webp" srcset="img/cta.webp">
+              <source type="image/jpeg" srcset="img/cta.png">
+              <img src="img/cta.png">
+            </picture>  -->
         <img src="img/cta.png" alt="call to action" class="cta-image">
         <div class="cta-form-wrapper container">
           <form action="handler.php" method="POST" class="cta-form">
@@ -117,7 +122,7 @@
             <p class="footer-copyright">
               &#169; <?php echo date('.d.m.y')?> «Aliance Production». Все права защищены.
             </p>
-            <a href="#" class="footer-policy">Политики конфиденциальности</a>
+            <a href="confident.php" class="footer-policy">Политики конфиденциальности</a>
           </div>
           <!-- /.footer-legal -->
           <div class="footer-author">
